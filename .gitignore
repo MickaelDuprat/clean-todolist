@@ -1,0 +1,47 @@
+# Ignorer les fichiers de configuration et caches d'IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Ignorer le répertoire de sortie de Maven
+target/
+
+# Ignorer les fichiers compilés Java
+*.class
+
+# Ignorer les fichiers de log de Maven
+logs/
+*.log
+
+# Ignorer les dépendances Node.js
+node_modules/
+
+# Ignorer les fichiers de sortie de build d'Angular
+dist/
+tmp/
+out-tsc/
+
+# Ignorer les fichiers de log de débogage de npm
+npm-debug.log*
+
+# Ignorer les fichiers système Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignorer les fichiers spécifiques à d'autres IDE
+.vscode/
+*.swp
+*.swo
+
+# Ignorer les fichiers générés par Angular CLI
+.browserslistrc
+.angular/
+
+# Ignore les fichiers générés par macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX
