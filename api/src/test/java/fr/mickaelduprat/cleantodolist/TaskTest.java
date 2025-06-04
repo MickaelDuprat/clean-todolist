@@ -1,8 +1,9 @@
 package fr.mickaelduprat.cleantodolist;
 
-import fr.mickaelduprat.cleantodolist.models.Task;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import fr.mickaelduprat.cleantodolist.model.Task;
 
 public class TaskTest {
 

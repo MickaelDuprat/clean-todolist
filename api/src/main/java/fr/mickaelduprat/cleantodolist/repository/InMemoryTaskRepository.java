@@ -1,27 +1,31 @@
-package fr.mickaelduprat.cleantodolist.repositories;
+package fr.mickaelduprat.cleantodolist.repository;
 
-import fr.mickaelduprat.cleantodolist.models.Task;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.stereotype.Repository;
-import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
+import fr.mickaelduprat.cleantodolist.model.Task;
+
 @Repository
-public class TaskRepository {
+public class InMemoryTaskRepository implements TaskRepositoryImpl {
 
     private final List<Task> tasks = new ArrayList<>();
     private final AtomicLong counter = new AtomicLong();
 
+    @Override
     public List<Task> findAll() {
         return new ArrayList<>(tasks);
     }
 
+    @Override
     public Optional<Task> findById(Long id) {
         return tasks.stream().filter(task -> task.getId().equals(id)).findFirst();
     }
 
+    @Override
     public Task save(Task task) {
         if (task.getId() == null) {
             task.setId(counter.incrementAndGet());
@@ -31,5 +35,10 @@ public class TaskRepository {
             tasks.add(task);
         }
         return task;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        tasks.removeIf(task -> task.getId().equals(id));
     }
 }
