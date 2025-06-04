@@ -14,3 +14,13 @@ Je me suis basé sur le format de [Keep a Changelog](https://keepachangelog.com/
 
 ### Modifié
 - Modification du fichier README.md
+
+## [0.2.0] - 2025-06-04
+
+### Ajouté
+- Ajout de tests unitaires
+- Ajout d'une classe permettant la sauvegarde en mémoire des tâches
+
+### Modifié
+- Réorganisation des packages
+- Remplacement des annotations @Getter et @Setter en @Data, @AllArgsConstructor et @NoArgsConstructor. C'est plus succinct et complet pour la manipulation de l'objet ensuite.
