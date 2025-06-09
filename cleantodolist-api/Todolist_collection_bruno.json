@@ -1,0 +1,137 @@
+{
+  "name": "Todolist",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Create Task",
+      "filename": "Create Task.bru",
+      "seq": 1,
+      "request": {
+        "url": "{{env_local}}/api/tasks",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\": 1,\n  \"label\": \"Exemple de tâche n°1\",\n  \"description\": \"Ceci est une description de la tâche.\",\n  \"completed\": false\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete Task By Id",
+      "filename": "Delete Task By Id.bru",
+      "seq": 5,
+      "request": {
+        "url": "{{env_local}}/api/tasks/1",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get Task By Id",
+      "filename": "Get Task By Id.bru",
+      "seq": 3,
+      "request": {
+        "url": "{{env_local}}/api/tasks/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get Tasks",
+      "filename": "Get Tasks.bru",
+      "seq": 4,
+      "request": {
+        "url": "{{env_local}}/api/tasks",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "sNB4lcU1GOucOCS2UwraX",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "env_local",
+          "value": "http://localhost:8080",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "Localhost"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Todolist",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0006656646728515625,
+    "filesCount": 5
+  }
+}

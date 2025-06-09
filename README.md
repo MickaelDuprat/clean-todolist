@@ -1,6 +1,6 @@
 # Clean-todolist
 
-Une application moderne de gestion de tâches (to-do list) développée avec Spring Boot pour le backend et Angular pour le frontend.
+Une application moderne de gestion de tâches (todolist) développée avec Spring Boot pour le backend et Angular pour le frontend.
 
 ## Description
 
@@ -16,7 +16,7 @@ L'application offre des fonctionnalités pour ajouter, modifier, supprimer et vi
 
 - **Frontend :**
     - Angular (v18.0.0 LTS)
-    - Node (v20.16.0 LTS)
+    - Node (v20.16.0 LTS) 
     - Npm (v10.8.1)
 
 ## Fonctionnalités
