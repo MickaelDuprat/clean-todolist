@@ -26,6 +26,11 @@ public class TaskController {
         return taskService.getAllTasks();
     }
 
+    @GetMapping("/not-completed")
+    public List<Task> getAllTasksToPerform() {
+        return taskService.getAllTasksToPerform();
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
         Optional<Task> task = taskService.getTaskById(id);
@@ -44,6 +49,18 @@ public class TaskController {
         }
         Task updatedTask = taskService.saveTask(task);
         return ResponseEntity.ok(updatedTask);
+    }
+
+    @PatchMapping("/{id}/completed")
+    public ResponseEntity<Task> updateTaskCompleted(@PathVariable Long id, @RequestBody boolean completed) {
+
+        return taskService.getTaskById(id)
+                .map(task -> {
+                    task.setCompleted(completed);
+                    Task updatedTask = taskService.saveTask(task);
+                    return ResponseEntity.ok(updatedTask);
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")

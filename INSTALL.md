@@ -2,21 +2,13 @@
 
 Ce guide vous accompagne pour installer la todolist sur votre environnement local.
 
-## Prérequis
+## Installation des Prérequis
 
-Avant de commencer, assurez-vous d'avoir les logiciels suivants installés :
-
-- **Java Development Kit (JDK) 21** : Nécessaire pour exécuter le backend Spring Boot.
-- **Maven** : Utilisé pour construire et gérer le projet Spring Boot (dans le cadre du projet, il est wrapper).
-- **Node.js et NPM** : Node.js est nécessaire pour exécuter le frontend Angular, et NPM (Node Package Manager) est utilisé pour installer les dépendances JavaScript.
-
-### Installation des Prérequis
-
-#### Java Development Kit (JDK) 21
+### Java Development Kit (JDK) 21
 
 Téléchargez le JDK 21 depuis le [site officiel d'Oracle](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) ou utilisez un OpenJDK.
 
-#### Installation de NPM (gestionnaire de paquet)
+### Installation de NPM (gestionnaire de paquet)
 
 1. **Télécharger Node.js** :
     - Rendez-vous sur le [site officiel de Node.js](https://nodejs.org/).

@@ -25,6 +25,11 @@ public class TaskService implements TaskServiceImpl {
     }
 
     @Override
+    public List<Task> getAllTasksToPerform() {
+        return taskRepository.findAllTasksToPerform();
+    }
+
+    @Override
     public Optional<Task> getTaskById(Long id) {
         return taskRepository.findById(id);
     }

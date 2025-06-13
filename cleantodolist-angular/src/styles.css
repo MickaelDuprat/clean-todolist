@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.m-top-15 {
+    margin-top: 15px;
+}
+
+.m-left-10 {
+    margin-left: 10px;
+}
+
+.m-right-15 {
+    margin-right: 15px;
+}
+
+.mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.mauto-button {
+    margin-left: auto;
+}

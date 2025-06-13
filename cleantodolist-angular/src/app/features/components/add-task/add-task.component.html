@@ -1,0 +1,21 @@
+<form (ngSubmit)="addTask()" class="add-task-form">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Ajouter une nouvelle tâche</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Titre de la tâche</mat-label>
+                <input matInput [(ngModel)]="newTask.label" name="label" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Description de la tâche</mat-label>
+                <textarea matInput [(ngModel)]="newTask.description" name="description" rows="4"></textarea>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Ajouter la tâche</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

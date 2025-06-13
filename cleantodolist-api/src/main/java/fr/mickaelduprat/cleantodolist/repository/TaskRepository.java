@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Collectors;
 
 import fr.mickaelduprat.cleantodolist.model.Task;
 
@@ -20,6 +21,13 @@ public class TaskRepository implements TaskRepositoryImpl {
     @Override
     public List<Task> findAll() {
         return new ArrayList<>(tasks);
+    }
+
+    @Override
+    public List<Task> findAllTasksToPerform() {
+        return tasks.stream()
+                .filter(task -> !task.isCompleted())
+                .collect(Collectors.toList());
     }
 
     @Override

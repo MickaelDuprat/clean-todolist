@@ -1,0 +1,13 @@
+.add-task-form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}

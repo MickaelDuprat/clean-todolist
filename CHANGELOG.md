@@ -4,6 +4,16 @@ Toutes les modifications du projet sont documentées dans ce fichier.
 
 Je me suis basé sur le format de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) qui respecte [Semantic Versioning](https://semver.org/lang/fr/spec/v2.0.0.html).
 
+## [1.0.0] - 2025-06-13
+
+### Ajouté
+- Gestion du CORS
+- Ajout d'une route pour ne récupérer que les tâches complétée
+
+### Modifié
+- L'application angular est désormais opérationnelle
+- Modification de la collection Bruno (client API) dans le repository
+
 ## [0.3.0] - 2025-06-10
 
 ### Ajouté
