@@ -6,11 +6,11 @@
     <parent>
         <groupId>fr.mickaelduprat</groupId>
         <artifactId>cleantodolist</artifactId>
-        <version>0.3.0</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>cleantodolist-angular</artifactId>
-    <version>0.3.0</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Clean todolist Frontend</name>

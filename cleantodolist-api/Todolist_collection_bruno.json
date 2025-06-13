@@ -14,7 +14,7 @@
         "params": [],
         "body": {
           "mode": "json",
-          "json": "{\n  \"id\": 1,\n  \"label\": \"Exemple de tâche n°1\",\n  \"description\": \"Ceci est une description de la tâche.\",\n  \"completed\": false\n}",
+          "json": "{\n  \"id\": 3,\n  \"label\": \"Exemple de tâche n°3\",\n  \"description\": \"Ceci est une description de la tâche.\",\n  \"completed\": false\n}",
           "formUrlEncoded": [],
           "multipartForm": [],
           "file": []
@@ -33,9 +33,9 @@
       "type": "http",
       "name": "Delete Task By Id",
       "filename": "Delete Task By Id.bru",
-      "seq": 5,
+      "seq": 8,
       "request": {
-        "url": "{{env_local}}/api/tasks/1",
+        "url": "{{env_local}}/api/tasks/5",
         "method": "DELETE",
         "headers": [],
         "params": [],
@@ -59,7 +59,7 @@
       "type": "http",
       "name": "Get Task By Id",
       "filename": "Get Task By Id.bru",
-      "seq": 3,
+      "seq": 7,
       "request": {
         "url": "{{env_local}}/api/tasks/1",
         "method": "GET",
@@ -85,7 +85,7 @@
       "type": "http",
       "name": "Get Tasks",
       "filename": "Get Tasks.bru",
-      "seq": 4,
+      "seq": 5,
       "request": {
         "url": "{{env_local}}/api/tasks",
         "method": "GET",
@@ -106,9 +106,89 @@
           "mode": "inherit"
         }
       }
+    },
+    {
+      "type": "http",
+      "name": "Get Tasks Not Completed",
+      "filename": "Get Tasks Not Completed.bru",
+      "seq": 6,
+      "request": {
+        "url": "{{env_local}}/api/tasks/not-completed",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update Task By Id",
+      "filename": "Update Task By Id.bru",
+      "seq": 3,
+      "request": {
+        "url": "{{env_local}}/api/tasks/1",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\": 1,\n  \"label\": \"Exemple de tâche n°1\",\n  \"description\": \"Ceci est une description de la tâche.\",\n  \"completed\": true\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update Task Status",
+      "filename": "Update Task Status.bru",
+      "seq": 4,
+      "request": {
+        "url": "{{env_local}}/api/tasks/3/completed",
+        "method": "PATCH",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "false",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
     }
   ],
-  "activeEnvironmentUid": "sNB4lcU1GOucOCS2UwraX",
+  "activeEnvironmentUid": "HrVIQKJBYxiGA2tDf2i3N",
   "environments": [
     {
       "variables": [
@@ -123,6 +203,18 @@
       "name": "Localhost"
     }
   ],
+  "root": {
+    "request": {
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "enabled": true,
+          "uid": "NADDvW83I0G277fvEtgnc"
+        }
+      ]
+    }
+  },
   "brunoConfig": {
     "version": "1",
     "name": "Todolist",
